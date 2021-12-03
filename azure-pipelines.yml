@@ -24,7 +24,7 @@ steps:
     packageType: sdk
     version: '5.x'
 
-- task: Npm@1
+- task: Npm@0
   displayName: 'Run npm install'
   inputs:
     verbose: false
