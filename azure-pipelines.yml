@@ -34,6 +34,15 @@ steps:
     customCommand: install -g npm@7.24.0
 ####
 
+- task: Npm@1
+  displayName: 'Run npm Audit fix'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: audit fix
+
+
+
 - script: './node_modules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
   displayName: 'Compile Sass assets'
 
