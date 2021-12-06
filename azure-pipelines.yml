@@ -9,9 +9,10 @@ trigger:
 - '*'
 
 pool:
+   vmImage: 'windows-2019'
   #vmImage: 'ubuntu-20.04'
   #vmImage: ubuntu-latest
-  vmImage: windows-latest
+  #vmImage: 'windows-latest'
   #demands:
   #- npm
 
@@ -25,7 +26,7 @@ steps:
     packageType: sdk
     version: '5.x'
 
-- task: Npm@2
+- task: Npm@1
   displayName: 'Run npm install'
   inputs:
     command: custom
