@@ -9,9 +9,9 @@ trigger:
 - '*'
 
 pool:
-  #vmImage: 'ubuntu-20.04'
+  vmImage: 'ubuntu-20.04'
   #vmImage: ubuntu-latest
-  vmImage: 'windows-latest'
+  #vmImage: 'windows-latest'
   #demands:
   #- npm
 
