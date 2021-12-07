@@ -26,6 +26,9 @@ steps:
     packageType: sdk
     version: '5.x'
 
+- task: NodeTool@0
+  inputs:
+    versionSpec: '6.x'
 - task: Npm@1
   displayName: 'Run npm install'
   inputs:
@@ -41,8 +44,9 @@ steps:
     verbose: false
     customCommand: audit fix
 
-
-
+- script: npm install -g sass
+  displayName: 'npm install sass'
+  
 - script: './node_modules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
   displayName: 'Compile Sass assets'
 
