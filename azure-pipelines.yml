@@ -37,12 +37,12 @@ steps:
     customCommand: install -g npm@7.24.0
 ####
 
-- task: Npm@1
-  displayName: 'Run npm Audit fix'
-  inputs:
-    command: custom
-    verbose: false
-    customCommand: audit fix
+# - task: Npm@1
+#   displayName: 'Run npm Audit fix'
+#   inputs:
+#     command: custom
+#     verbose: false
+#     customCommand: audit fix
 
 - script: npm install -g sass
   displayName: 'npm install sass'
