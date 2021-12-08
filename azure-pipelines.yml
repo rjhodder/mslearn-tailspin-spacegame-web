@@ -43,6 +43,8 @@ steps:
 #     command: custom
 #     verbose: false
 #     customCommand: audit fix
+- script: npm fund
+  displayName: 'npm fund'
 
 - script: npm install -g sass
   displayName: 'npm install sass'
